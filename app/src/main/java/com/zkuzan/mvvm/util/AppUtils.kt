@@ -138,4 +138,18 @@ object AppUtils {
         }
         return working
     }
+
+    @JvmStatic
+    fun isSpace(s: String?): Boolean {
+        if (s == null) return true
+        var i = 0
+        val len = s.length
+        while (i < len) {
+            if (!Character.isWhitespace(s[i])) {
+                return false
+            }
+            ++i
+        }
+        return true
+    }
 }
